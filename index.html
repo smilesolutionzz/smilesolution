@@ -12,7 +12,7 @@
     function sendMail(e) {
       e.preventDefault();
       emailjs.init("SO84U2jE2cHN2WTzV");
-      emailjs.sendForm('service_0wn9xii', 'template_smilesolution', e.target)
+      emailjs.sendForm('service_0wn9xii', 'template_drrtxn', e.target)
         .then(() => alert('문의가 전송되었습니다!'), (error) => alert('실패: ' + error));
     }
   </script>
@@ -143,7 +143,7 @@
   <section data-aos="fade-up">
     <h2>🚀 우리가 제공하는 서비스</h2>
     <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-      <div><strong>✅ AI 마케팅 자동화 설정</strong><br>인스타그램, 유튜브, 쓰레드 자동 게시</div>
+      <div><strong>✅ AI 마케팅 자동화 설정</strong><br>인스타그램, 유튜브, 쓰레드, 블로그 자동 게시</div>
       <div><strong>✅ CRM 분석 + 타겟 설정</strong><br>고객 데이터 기반 맞춤 캠페인 추천</div>
       <div><strong>✅ AI 콘텐츠 생성</strong><br>기업 맞춤형 콘텐츠 자동 제작</div>
       <div><strong>✅ AI 챗봇/상담 자동화</strong><br>고객 문의 실시간 대응 챗봇 제공</div>
@@ -187,6 +187,21 @@
   <script>
     AOS.init();
   </script>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+<script type="text/javascript">
+  emailjs.init("SO84U2jE2cHN2WTzV");
+  function sendMail(e) {
+    e.preventDefault();
+    emailjs.sendForm('service_0wn9xii', 'template_drrtxn', e.target)
+      .then(() => {
+        alert('문의가 전송되었습니다!');
+      }, (error) => {
+        alert('실패: ' + JSON.stringify(error));
+      });
+  }
+</script>
+
 
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">

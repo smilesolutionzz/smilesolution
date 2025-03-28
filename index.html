@@ -188,6 +188,21 @@
     AOS.init();
   </script>
 
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+<script type="text/javascript">
+  emailjs.init("SO84U2jE2cHN2WTzV");
+  function sendMail(e) {
+    e.preventDefault();
+    emailjs.sendForm('service_0wn9xii', 'template_drrtxn', e.target)
+      .then(() => {
+        alert('문의가 전송되었습니다!');
+      }, (error) => {
+        alert('실패: ' + JSON.stringify(error));
+      });
+  }
+</script>
+
+
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
